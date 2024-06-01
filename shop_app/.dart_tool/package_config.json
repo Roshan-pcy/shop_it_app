@@ -62,6 +62,12 @@
       "languageVersion": "3.3"
     },
     {
+      "name": "google_nav_bar",
+      "rootUri": "file:///C:/Users/pcymi/AppData/Local/Pub/Cache/hosted/pub.dev/google_nav_bar-5.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "leak_tracker",
       "rootUri": "file:///C:/Users/pcymi/AppData/Local/Pub/Cache/hosted/pub.dev/leak_tracker-10.0.4",
       "packageUri": "lib/",
@@ -170,10 +176,10 @@
       "languageVersion": "3.4"
     }
   ],
-  "generated": "2024-05-31T05:23:18.776950Z",
+  "generated": "2024-05-31T06:49:38.809784Z",
   "generator": "pub",
-  "generatorVersion": "3.4.0",
+  "generatorVersion": "3.4.1",
   "flutterRoot": "file:///C:/flutter",
-  "flutterVersion": "3.22.0",
+  "flutterVersion": "3.22.1",
   "pubCache": "file:///C:/Users/pcymi/AppData/Local/Pub/Cache"
 }
