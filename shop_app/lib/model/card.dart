@@ -1,31 +1,32 @@
+import 'package:flutter/material.dart';
 import 'package:shop_app/model/shoe.dart';
 
-class card {
+class card extends ChangeNotifier {
   List<Shoe> shoeshop = [
     Shoe(
         name: 'New kick',
-        price: '120\$',
-        image: 'asstes/imag1.jpg',
+        price: '120',
+        image: 'assets/img1.jpg',
         dis: 'A brand new addida shoe shop with smooth kick'),
     Shoe(
         name: 'Padrick',
-        price: '100\$',
-        image: 'asstes/imag2.jpg',
+        price: '100',
+        image: 'assets/img5.jpg',
         dis: 'A brand new padrick  mpdel with smooth kick'),
     Shoe(
         name: 'Fashtion world',
-        price: '220\$',
-        image: 'asstes/imag1.jpg',
+        price: '220',
+        image: 'assets/img3.jpg',
         dis: 'A brand fastion world and light weight'),
     Shoe(
         name: ' Strim feek',
-        price: '120\$',
-        image: 'asstes/imag1.jpg',
+        price: '120',
+        image: 'assets/img4.jpg',
         dis: 'A brand new addida shoe shop with smooth kick'),
     Shoe(
         name: 'New kick',
-        price: '220\$',
-        image: 'asstes/imag1.jpg',
+        price: '220',
+        image: 'assets/img2.jpg',
         dis: 'A brand new addida shoe shop with smooth kick')
   ];
 
@@ -40,16 +41,20 @@ class card {
 
   //get car list
   List<Shoe> getCard() {
-    return shoeshop;
+    return userList;
   }
 
   //add to list
   void addList(Shoe shoe) {
-    shoeshop.add(shoe);
+    userList.add(shoe);
+    print("this is the list$userList");
+    notifyListeners();
   }
 
   //remove list
   void removeList(Shoe shoe) {
-    shoeshop.remove(shoe);
+    print("this is the Renmoved list$userList");
+    userList.remove(shoe);
+    notifyListeners();
   }
 }

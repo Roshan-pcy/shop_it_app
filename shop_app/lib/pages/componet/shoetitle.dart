@@ -1,9 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:shop_app/model/card.dart';
 import 'package:shop_app/model/shoe.dart';
 
 class Shoetile extends StatelessWidget {
   final Shoe shoe;
   const Shoetile({super.key, required this.shoe});
+  void addTOCart(Shoe shoe, BuildContext context) {
+    Provider.of<card>(context, listen: false).addList(shoe);
+    showDialog(
+      context: context,
+      builder: (context) {
+        return const AlertDialog(
+          title: Text(
+            'Succefuly Added🎉',
+            style: TextStyle(
+                color: Colors.white, fontSize: 15, fontWeight: FontWeight.w600),
+          ),
+          backgroundColor: Color.fromARGB(255, 115, 228, 119),
+        );
+      },
+    );
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -20,11 +38,20 @@ class Shoetile extends StatelessWidget {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
-            child: Image.asset(shoe.image),
+            child: Image.asset(
+              fit: BoxFit.cover,
+              shoe.image,
+              height: 200,
+              width: 300,
+            ),
           ),
-          Text(
-            shoe.dis,
-            style: const TextStyle(color: Colors.grey),
+          Flexible(
+            child: SingleChildScrollView(
+              child: Text(
+                shoe.dis,
+                style: const TextStyle(color: Colors.grey),
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 8.0),
@@ -46,17 +73,22 @@ class Shoetile extends StatelessWidget {
                     ),
                   ],
                 ),
-                Container(
-                    padding: const EdgeInsets.all(20),
-                    decoration: const BoxDecoration(
-                        color: Colors.black,
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            bottomRight: Radius.circular(10))),
-                    child: const Icon(
-                      Icons.add,
-                      color: Colors.white,
-                    ))
+                GestureDetector(
+                  onTap: () {
+                    addTOCart(shoe, context);
+                  },
+                  child: Container(
+                      padding: const EdgeInsets.all(20),
+                      decoration: const BoxDecoration(
+                          color: Colors.black,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(10),
+                              bottomRight: Radius.circular(10))),
+                      child: const Icon(
+                        Icons.add,
+                        color: Colors.white,
+                      )),
+                )
               ],
             ),
           )
