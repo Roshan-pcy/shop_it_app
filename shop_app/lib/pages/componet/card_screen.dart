@@ -32,6 +32,7 @@ class CardScreen extends StatelessWidget {
                           title: Text(shoe.name),
                           subtitle: Text(
                             shoe.price,
+                            style: const TextStyle(),
                           ),
                           trailing: IconButton(
                               onPressed: () {
