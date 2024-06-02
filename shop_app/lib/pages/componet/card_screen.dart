@@ -23,14 +23,16 @@ class CardScreen extends StatelessWidget {
                     itemBuilder: (context, index) {
                       var shoe = value.getCard()[index];
                       return Container(
-                        margin: EdgeInsets.all(10),
+                        margin: EdgeInsets.all(11),
                         decoration: BoxDecoration(
                             color: Colors.white,
                             borderRadius: BorderRadius.circular(12)),
                         child: ListTile(
                           leading: Image.asset(shoe.image),
                           title: Text(shoe.name),
-                          subtitle: Text(shoe.price),
+                          subtitle: Text(
+                            shoe.price,
+                          ),
                           trailing: IconButton(
                               onPressed: () {
                                 Provider.of<card>(context, listen: false)
