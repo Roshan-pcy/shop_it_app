@@ -1,16 +1,19 @@
 # shop_app
 
 A new Flutter project.
+## Getting Started <br>
+ Here is the shoping app ui and demo video<br>
+ 
+ <img width="263" alt="shop2" src="https://github.com/Roshan-pcy/shop_it_app/assets/170493047/bd118f8f-f427-4677-9a60-255e8127ff49">
+<br>
+<img width="287" alt="shop1" src="https://github.com/Roshan-pcy/shop_it_app/assets/170493047/b4a16221-e83c-4e81-ad0b-8322cdc3d479"> <br>
 
-## Getting Started
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Screenshot 2024-06-01 163139](https://github.com/Roshan-pcy/shop_it_app/assets/170493047/529609eb-c80a-41b7-92ec-b4b62fa20f6a)
+<br>
+
+https://github.com/Roshan-pcy/shop_it_app/assets/170493047/819b984b-9e46-4213-8ff9-d44e6e9f4211
+
